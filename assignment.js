@@ -1,25 +1,28 @@
-
-
-//1.kilometerToMeter problem solve
+//1. kilometerToMeter problem solving part.
 function kilometerToMeter(kilometer) {
-    var meter = kilometer * 1000;
-    return meter;
+    if (kilometer < 0) {
+        return ("Enter a valid number"); //extra-part.
+    }
+    else {
+        var meter = kilometer * 1000;
+        return meter;
+    }
 }
-var result = kilometerToMeter(10);
+var result = kilometerToMeter(5);
 console.log(result);
 
 
-//2. budgetCalculator problem solve
+//2. budgetCalculator problem solving part.
 function budgetCalculator(watch, phone, laptop) {
     var total = (watch * 50) + (phone * 100) + (laptop * 500);
     return total;
 }
-var sum = budgetCalculator(5, 10, 5);
-console.log(sum);
+var result = budgetCalculator(3, 7, 10);
+console.log(result);
 
 
 
-//3.hotelcost problem solve
+//3.hotelcost problem solving part.
 function hotelCost(day) {
     var cost = 0;
     if (day <= 10) {
@@ -45,12 +48,12 @@ console.log(totalCost);
 
 
 
-//4. megafriend problem solve
-function megaFriend(array) {
+//4. megafriend problem solving part.
+function megaFriend(names) {
     var longestName = "";
-    var count = 0
-    for (var i = 0; i < array.length; i++) {
-        var character = array[i];
+    var count = 0;
+    for (var i = 0; i < names.length; i++) {
+        var character = names[i];
         if (character.length > count) {
             var count = character.length;
             longestName = character;
@@ -58,5 +61,5 @@ function megaFriend(array) {
     }
     return longestName;
 }
-var result = megaFriend(["naeem", "mubarak", "tridibbonik", "ruhulamin", "tanjinjesika"]);
+var result = megaFriend(["Naeem", "Mubarak", "Tridibbonik", "Ruhulamin", "Tanjinjesika"]);
 console.log(result);
